@@ -23,7 +23,8 @@ const productSchema = new mongoose.Schema({
     enum: ['feminino', 'masculino', 'infantil', 'outros', 'esportivo', 'acessórios', 'calçados'],
     required: true
     },
-    criadoEm: { type: Date, default: Date.now }
+    criadoEm: { type: Date, default: Date.now },
+    imagems: [String]
 });
 
 module.exports = mongoose.model('Product', productSchema);
