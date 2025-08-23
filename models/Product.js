@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
 
 const measureSchema = new mongoose.Schema({
-    busto: Number,
-    cintura: Number,
-    quadril: Number,
-    comprimento: Number,
-    entrepernas: Number,
-    largura: Number,
-    manga: Number,
+    busto: { type: Number, required: false },
+    cintura: { type: Number, required: false },
+    quadril: { type: Number, required: false },
+    comprimento: { type: Number, required: false },
+    largura: { type: Number, required: false },
+    manga: { type: Number, required: false },
 }, { _id: false });
 
 const productSchema = new mongoose.Schema({
@@ -20,7 +19,7 @@ const productSchema = new mongoose.Schema({
     medidas: measureSchema,
     categoria: {
     type: String,
-    enum: ['feminino', 'masculino', 'infantil', 'outros', 'esportivo', 'acessórios', 'calçados'],
+    enum: ['feminino', 'masculino', 'infantil', 'outros', 'esportivo', 'acessorios', 'calçados'],
     required: true
     },
     criadoEm: { type: Date, default: Date.now },
