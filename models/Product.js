@@ -19,7 +19,7 @@ const productSchema = new mongoose.Schema({
     medidas: measureSchema,
     categoria: {
     type: String,
-    enum: ['feminino', 'masculino', 'infantil', 'outros', 'esportivo', 'acessorios', 'calçados'],
+    enum: ['superiores', 'inferiores', 'outros', 'acessorios', 'calçados', 'novidades'],
     required: true
     },
     criadoEm: { type: Date, default: Date.now },
